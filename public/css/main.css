@@ -1,0 +1,17 @@
+img {
+  height: 100px;
+  width: 175px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.buttons {
+  margin:10px 0px 5px 80px;
+}
+.margin {
+  margin: 10px 10px 10px 20px;
+}
+
+#totals {
+  text-align: center;
+}

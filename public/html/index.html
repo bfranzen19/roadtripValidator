@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>roadtrip validator</title>
+<!-- vue -->
+  <script src="https://unpkg.com/vue"></script>
+<!-- bootstrap link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<!-- link to css file -->
+  <link rel="stylesheet", href="/css/main.css" />
+</head>
+<body>
+  <div id="app">
+  <div id="container-fluid">
+    <div id="totals" v-bind:style='bgColor'>
+      <span> total cost: $ {{totalCost}} </span>
+      <span> total weight: {{totalWeight}}lbs </span>
+    </div>
+  </div>
+
+  <div id="container">
+    <div class="row">
+      <div class="col-sm-6, col-md-6, col-lg-3">
+        <h1> cargo validatoooooor! </h1>
+        <div id="tent">
+          <span id="tent" class="margin"><img src='/imgs/tent.jpg'/> tent </span>
+          <span class="margin">  ($ {{tent.cost}} each) </span>
+          <span class="margin">  ({{tent.weight}} lbs each) </span>
+          <br />
+          <span class="buttons">
+            <button class="minus" v-on:click="subtractItem('tent')"> - </button>
+            <button class="plus" v-on:click="addItem('tent')"> + </button>
+          </span>
+          <br/>
+          <span> count: {{tent.count}}  </span>
+          <span> cost: $ {{tent.itemCost}}  </span>
+          <span> weight: {{tent.itemWeight}} lbs  </span>
+          <br/><br/><br/>
+        </div>
+
+        <div id="hammock">
+          <span id="hammock" class="margin"><img src='/imgs/hammock.jpg'/> hammock </span>
+          <span class="margin">  ($ {{hammock.cost}} each) </span>
+          <span class="margin">  ({{hammock.weight}} lbs each) </span>
+          <br />
+          <span class="buttons">
+            <button class="minus" v-on:click="subtractItem('hammock')"> - </button>
+            <button class="plus" v-on:click="addItem('hammock')"> + </button>
+          </span>
+          <br/>
+          <span> count: {{hammock.count}}  </span>
+          <span> cost: $ {{hammock.itemCost}}  </span>
+          <span> weight: {{hammock.itemWeight}} lbs  </span>
+          <br/><br/><br/>
+        </div>
+
+
+        <div id="blanket">
+          <span id="blanket" class="margin"><img src='/imgs/blanket.jpg'/> blanket </span>
+          <span class="margin">  ($ {{blanket.cost}} each) </span>
+          <span class="margin">  ({{blanket.weight}} lbs each) </span>
+          <br />
+          <span class="buttons">
+            <button class="minus" v-on:click="subtractItem('blanket')"> - </button>
+            <button class="plus" v-on:click="addItem('blanket')"> + </button>
+          </span>
+          <br/>
+          <span> count: {{blanket.count}}  </span>
+          <span> cost: $ {{blanket.itemCost}}  </span>
+          <span> weight: {{blanket.itemWeight}} lbs  </span>
+          <br/><br/><br/>
+        </div>
+
+
+        <div id="water">
+          <span id="water" class="margin"><img src='/imgs/water.jpg'/> water </span>
+          <span class="margin">  ($ {{water.cost}} each) </span>
+          <span class="margin">  ({{water.weight}} lbs each) </span>
+          <br />
+          <span class="buttons">
+            <button class="minus" v-on:click="subtractItem('water')"> - </button>
+            <button class="plus" v-on:click="addItem('water')"> + </button>
+          </span>
+          <br/>
+          <span> count: {{water.count}}  </span>
+          <span> cost: $ {{water.itemCost}}  </span>
+          <span> weight: {{water.itemWeight}} lbs  </span>
+          <br/><br/><br/>
+        </div>
+
+        <div id="food">
+          <span id="food" class="margin"><img src='/imgs/food.jpg'/> food </span>
+          <span class="margin">  ($ {{food.cost}} each) </span>
+          <span class="margin">  ({{food.weight}} lbs each) </span>
+          <br />
+          <span class="buttons">
+            <button class="minus" v-on:click="subtractItem('food')"> - </button>
+            <button class="plus" v-on:click="addItem('food')"> + </button>
+          </span>
+          <br/>
+          <span> count: {{food.count}}  </span>
+          <span> cost: $ {{food.itemCost}}  </span>
+          <span> weight: {{food.itemWeight}} lbs  </span>
+          <br/><br/><br/>
+        </div>
+
+      </div>
+    </div>
+</div>
+</div> <!-- end of div app -->
+
+<!-- bootstrap jQ, popper, js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- jQ link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- js file -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
