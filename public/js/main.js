@@ -1,7 +1,9 @@
 // $(document).ready(function() {
-//   console.log('js is linked, yo')
+//
+//
 //
 // }) /* -=-=-=-=-=- end of jQ doc ready -=-=-=-=-=- */
+
 
 var app = new Vue({
   el: '#app',
@@ -75,17 +77,22 @@ var app = new Vue({
 
     bgColor: function(){
       if(this.totalCost > 199 || this.totalWeight > 199) {
-        return {backgroundColor:'red'}
+        return {backgroundColor:'#D12C32'}
       } else {
-        return {backgroundColor:'white'}
+        return {backgroundColor:'#49D29B'}
       }
     },
   }, /* end of computed */
 
-
-
-
-
-
-
 }) /* -=-=-=-=-=- end of vue -=-=-=-=-=- */
+
+// var navbar = document.getElementById("navbar");
+// var sticky = navbar.offsetTop;
+//
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }

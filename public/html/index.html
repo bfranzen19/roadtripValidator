@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>roadtrip validator</title>
 <!-- vue -->
   <script src="https://unpkg.com/vue"></script>
@@ -11,98 +12,106 @@
 </head>
 <body>
   <div id="app">
-  <div id="container-fluid">
-    <div id="totals" v-bind:style='bgColor'>
-      <span> total cost: $ {{totalCost}} </span>
-      <span> total weight: {{totalWeight}}lbs </span>
-    </div>
-  </div>
+
 
   <div id="container">
     <div class="row">
-      <div class="col-sm-6, col-md-6, col-lg-3">
+      <div class="col-sm-3, col-md-6, col-lg-12">
+        <div id="container-fluid">
+
         <h1> cargo validatoooooor! </h1>
+
+            <div id="totals" v-bind:style='bgColor'>
+              <span> total cost: ${{totalCost}} | total weight: {{totalWeight}}lbs </span>
+            </div>
+
+
+        </div> <!-- end of header -->
+
+        <!-- start of items -->
         <div id="tent">
-          <span id="tent" class="margin"><img src='/imgs/tent.jpg'/> tent </span>
-          <span class="margin">  ($ {{tent.cost}} each) </span>
-          <span class="margin">  ({{tent.weight}} lbs each) </span>
-          <br />
+          <img src='/imgs/tent.jpg'/>
+          <span class="itemName">tent</span> <br/>
+          <span class="itemTotals">(${{tent.cost}} each / {{tent.weight}} lbs each)</span><br/>
+
+          <span class="itemTotals">
+            count: {{tent.count}} | cost: ${{tent.itemCost}} | weight: {{tent.itemWeight}} lbs
+          </span><br/>
+
           <span class="buttons">
-            <button class="minus" v-on:click="subtractItem('tent')"> - </button>
-            <button class="plus" v-on:click="addItem('tent')"> + </button>
-          </span>
-          <br/>
-          <span> count: {{tent.count}}  </span>
-          <span> cost: $ {{tent.itemCost}}  </span>
-          <span> weight: {{tent.itemWeight}} lbs  </span>
-          <br/><br/><br/>
+            <button class="minus btn btn-xs btn-outline-danger waves-effect" v-on:click="subtractItem('tent')"> - </button>
+            <button class="plus btn btn-xs btn-outline-success waves-effect" v-on:click="addItem('tent')"> + </button>
+          </span> <br/>
         </div>
 
-        <div id="hammock">
-          <span id="hammock" class="margin"><img src='/imgs/hammock.jpg'/> hammock </span>
-          <span class="margin">  ($ {{hammock.cost}} each) </span>
-          <span class="margin">  ({{hammock.weight}} lbs each) </span>
-          <br />
+        <div id="tent">
+          <img src='/imgs/hammock.jpg'/>
+          <span class="itemName">hammock</span> <br/>
+          <span class="itemTotals">(${{hammock.cost}} each / {{hammock.weight}} lbs each)</span><br/>
+
+          <span class="itemTotals">
+            count: {{hammock.count}} | cost: ${{hammock.itemCost}} | weight: {{hammock.itemWeight}} lbs
+          </span><br/>
+
           <span class="buttons">
-            <button class="minus" v-on:click="subtractItem('hammock')"> - </button>
-            <button class="plus" v-on:click="addItem('hammock')"> + </button>
-          </span>
-          <br/>
-          <span> count: {{hammock.count}}  </span>
-          <span> cost: $ {{hammock.itemCost}}  </span>
-          <span> weight: {{hammock.itemWeight}} lbs  </span>
-          <br/><br/><br/>
+            <button class="minus btn btn-xs btn-outline-danger waves-effect" v-on:click="subtractItem('hammock')"> - </button>
+            <button class="plus btn btn-xs btn-outline-success waves-effect" v-on:click="addItem('hammock')"> + </button>
+          </span> <br/>
+        </div>
+
+        <div id="tent">
+          <img src='/imgs/blanket.jpg'/>
+          <span class="itemName">blanket</span> <br/>
+          <span class="itemTotals">(${{blanket.cost}} each / {{blanket.weight}} lbs each)</span><br/>
+
+          <span class="itemTotals">
+            count: {{blanket.count}} | cost: ${{blanket.itemCost}} | weight: {{blanket.itemWeight}} lbs
+          </span><br/>
+
+          <span class="buttons">
+            <button class="minus btn btn-xs btn-outline-danger waves-effect" v-on:click="subtractItem('blanket')"> - </button>
+            <button class="plus btn btn-xs btn-outline-success waves-effect" v-on:click="addItem('blanket')"> + </button>
+          </span> <br/>
+        </div>
+
+        <div id="tent">
+          <img src='/imgs/water.jpg'/>
+          <span class="itemName">water</span> <br/>
+          <span class="itemTotals">(${{water.cost}} each / {{water.weight}} lbs each)</span><br/>
+
+          <span class="itemTotals">
+            count: {{water.count}} | cost: ${{water.itemCost}} | weight: {{water.itemWeight}} lbs
+          </span><br/>
+
+          <span class="buttons">
+            <button class="minus btn btn-xs btn-outline-danger waves-effect" v-on:click="subtractItem('water')"> - </button>
+            <button class="plus btn btn-xs btn-outline-success waves-effect" v-on:click="addItem('water')"> + </button>
+          </span> <br/>
+        </div>
+
+        <div id="tent">
+          <img src='/imgs/food.jpg'/>
+          <span class="itemName">food</span> <br/>
+          <span class="itemTotals">(${{food.cost}} each / {{food.weight}} lbs each)</span><br/>
+
+          <span class="itemTotals">
+            count: {{food.count}} | cost: ${{food.itemCost}} | weight: {{food.itemWeight}} lbs
+          </span><br/>
+
+          <span class="buttons">
+            <button class="minus btn btn-xs btn-outline-danger waves-effect" v-on:click="subtractItem('food')"> - </button>
+            <button class="plus btn btn-xs btn-outline-success waves-effect" v-on:click="addItem('food')"> + </button>
+          </span> <br/>
         </div>
 
 
-        <div id="blanket">
-          <span id="blanket" class="margin"><img src='/imgs/blanket.jpg'/> blanket </span>
-          <span class="margin">  ($ {{blanket.cost}} each) </span>
-          <span class="margin">  ({{blanket.weight}} lbs each) </span>
-          <br />
-          <span class="buttons">
-            <button class="minus" v-on:click="subtractItem('blanket')"> - </button>
-            <button class="plus" v-on:click="addItem('blanket')"> + </button>
-          </span>
-          <br/>
-          <span> count: {{blanket.count}}  </span>
-          <span> cost: $ {{blanket.itemCost}}  </span>
-          <span> weight: {{blanket.itemWeight}} lbs  </span>
-          <br/><br/><br/>
-        </div>
 
 
-        <div id="water">
-          <span id="water" class="margin"><img src='/imgs/water.jpg'/> water </span>
-          <span class="margin">  ($ {{water.cost}} each) </span>
-          <span class="margin">  ({{water.weight}} lbs each) </span>
-          <br />
-          <span class="buttons">
-            <button class="minus" v-on:click="subtractItem('water')"> - </button>
-            <button class="plus" v-on:click="addItem('water')"> + </button>
-          </span>
-          <br/>
-          <span> count: {{water.count}}  </span>
-          <span> cost: $ {{water.itemCost}}  </span>
-          <span> weight: {{water.itemWeight}} lbs  </span>
-          <br/><br/><br/>
-        </div>
 
-        <div id="food">
-          <span id="food" class="margin"><img src='/imgs/food.jpg'/> food </span>
-          <span class="margin">  ($ {{food.cost}} each) </span>
-          <span class="margin">  ({{food.weight}} lbs each) </span>
-          <br />
-          <span class="buttons">
-            <button class="minus" v-on:click="subtractItem('food')"> - </button>
-            <button class="plus" v-on:click="addItem('food')"> + </button>
-          </span>
-          <br/>
-          <span> count: {{food.count}}  </span>
-          <span> cost: $ {{food.itemCost}}  </span>
-          <span> weight: {{food.itemWeight}} lbs  </span>
-          <br/><br/><br/>
-        </div>
+
+
+
+
 
       </div>
     </div>
