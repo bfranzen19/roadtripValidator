@@ -1,7 +1,5 @@
 // $(document).ready(function() {
 //
-//
-//
 // }) /* -=-=-=-=-=- end of jQ doc ready -=-=-=-=-=- */
 
 
@@ -9,41 +7,41 @@ var app = new Vue({
   el: '#app',
   data: {
     // message: 'yo, yo, yiggity, yo!',
-      tent: {
-        cost:   100,
-        itemCost: 0,
-        weight: 5,
-        itemWeight: 0,
-        count: 0,
-      },
-      hammock: {
-        cost:   50,
-        itemCost: 0,
-        weight: 1,
-        itemWeight: 0,
-        count: 0,
-      },
-      blanket: {
-        cost:   '25',
-        itemCost: 0,
-        weight: '2',
-        itemWeight: 0,
-        count: 0,
-      },
-      water: {
-        cost:   '5',
-        itemCost: 0,
-        weight: '5',
-        itemWeight: 0,
-        count: 0,
-      },
-      food: {
-        cost:   '25',
-        itemCost: 0,
-        weight: '5',
-        itemWeight: 0,
-        count: 0,
-      },
+    tent: {
+      cost:   100,
+      itemCost: 0,
+      weight: 5,
+      itemWeight: 0,
+      count: 0,
+    },
+    hammock: {
+      cost:   50,
+      itemCost: 0,
+      weight: 1,
+      itemWeight: 0,
+      count: 0,
+    },
+    blanket: {
+      cost:   '25',
+      itemCost: 0,
+      weight: '2',
+      itemWeight: 0,
+      count: 0,
+    },
+    water: {
+      cost:   '5',
+      itemCost: 0,
+      weight: '5',
+      itemWeight: 0,
+      count: 0,
+    },
+    food: {
+      cost:   '25',
+      itemCost: 0,
+      weight: '5',
+      itemWeight: 0,
+      count: 0,
+    },
 
   }, /* end of data object */
 
@@ -77,9 +75,9 @@ var app = new Vue({
 
     bgColor: function(){
       if(this.totalCost > 199 || this.totalWeight > 199) {
-        return {backgroundColor:'#D12C32'}
+        return {backgroundColor:'#CF353A'}
       } else {
-        return {backgroundColor:'#49D29B'}
+        return {backgroundColor:'#008643'}
       }
     },
   }, /* end of computed */
