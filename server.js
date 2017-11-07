@@ -32,6 +32,30 @@ app.get('/cargo-validator', function(req, res) {
 
 
 
+app.post('/validate', function(req,res) {
+  console.log('POST sent')
+  // var dataObj = JSON.parse(req.body)
+  // console.log('new obj:', dataObj)
+  console.log('body: ' + JSON.stringify(req.body))
+  var cost = req.body.cost
+  var weight = req.body.weight
+
+  console.log('cost: ',cost, 'weight: ', weight)
+
+  if(cost < 1 || weight < 1) {
+    res.send('please add items')
+    console.log('response: please add items.')
+  } else if (cost > 199 || weight > 199) {
+    res.send('over weight / budget. please remove items.')
+    console.log('response: over weight / budget. please remove items.')
+  } else {
+    res.send('cargo is valid!')
+    console.log('response: cargo is valid!')
+  }
+
+
+})
+
 
 
 
